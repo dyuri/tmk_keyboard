@@ -47,25 +47,25 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         PGDN,ENT, SPC 
     ),
 
-    KEYMAP(  // Layer1: function and specal keys TODO
+    KEYMAP(  // Layer1: function and mouse
         // left hand
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,Q,   D,   R,   W,   B,   TRNS,
-        TRNS,A,   S,   H,   T,   G,
-        TRNS,Z,   X,   M,   C,   V,   TRNS,
+        TRNS,F1,  F2,  F3,  F4,  F5,  TRNS,
+        TRNS,MENU,MPRV,MNXT,MPLY,PAUS,TRNS,
+        CAPS,MUTE,VOLU,INS, HOME,PGUP,
+        TRNS,MSTP,VOLD,DEL, END, PGDN,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
                                  TRNS,TRNS,TRNS,
         // right hand
-             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,Y,   U,   I,   O,   P,   TRNS,
-                  H,   J,   K,   L,   SCLN,TRNS,
-             TRNS,N,   M,   COMM,DOT, QUOT,TRNS,
+             TRNS,F6,  F7,  F8,  F9,  F10, F11, 
+             TRNS,BTN3,NO,  MS_U,NO,  ACL0,F12, 
+                  BTN4,MS_L,MS_D,MS_R,ACL1,TRNS,
+             TRNS,BTN5,NO,  MS_D,NO,  ACL2,TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,
-        TRNS,
-        TRNS,TRNS,TRNS
+        WH_L,WH_R,
+        WH_U,
+        WH_D,BTN2,BTN1
     ),
 
     KEYMAP(  // Layer2: qwerty
