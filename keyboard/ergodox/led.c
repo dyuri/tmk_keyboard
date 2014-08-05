@@ -25,6 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 void led_set(uint8_t usb_led)
 {
+#ifndef KEYMAP_REPA
+
     // topmost - NumLock
 #ifndef INVERT_NUMLOCK
     if (usb_led & (1<<USB_LED_NUM_LOCK)) {
@@ -53,5 +55,7 @@ void led_set(uint8_t usb_led)
     } else {
         ergodox_right_led_3_off();
     }
+
+#endif
 }
 

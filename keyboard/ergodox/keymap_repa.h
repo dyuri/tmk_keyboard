@@ -17,7 +17,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                        | RGui | RAlt |       | LAlt | LGui |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      | ~L1  |       | PgUp |      |      |
-     *                                 | Space| BkSp |------|       |------| Enter| Space|
+     *                                 | Space| BkSp |------|       |------| Enter|  Esc |
      *                                 |      |      | ~L4  |       | PgDn |      |      |
      *                                 `--------------------'       `--------------------'
      *
@@ -44,7 +44,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        LEFT,DOWN,UP,  RGHT,RCTL,
         RALT,RGUI,
         PGUP,
-        PGDN,ENT, SPC 
+        PGDN,ENT, ESC
     ),
 
     KEYMAP(  // Layer1: function and mouse
