@@ -14,10 +14,10 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *   | LCtrl|   `  |   \  |   [  |   ]  |                                       |  Lft |  Dn  |  Up  | Rght | RCtrl|
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        | RGui | RAlt |       | LAlt | LGui |
+     *                                        | LGui | LAlt |       | RAlt | RGui |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      | ~L1  |       | PgUp |      |      |
-     *                                 | Space| BkSp |------|       |------| Enter|  Esc |
+     *                                 | Space| BkSp |------|       |------| Enter| RAlt |
      *                                 |      |      | ~L4  |       | PgDn |      |      |
      *                                 `--------------------'       `--------------------'
      *
@@ -35,7 +35,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LCTL,GRV, BSLS,LBRC,RBRC,
                                       LGUI,LALT,
                                             FN3,
-                                 SPC,BSPC,  FN6,
+                                 FN7,BSPC,  FN6,
         // right hand
               FN2,6,   7,   8,   9,   0,   EQL,
               FN5,F,   G,   C,   R,   L,   SLSH,
@@ -44,7 +44,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        LEFT,DOWN,UP,  RGHT,RCTL,
         RALT,RGUI,
         PGUP,
-        PGDN,ENT, ESC
+        PGDN,ENT, RALT
     ),
 
     KEYMAP(  // Layer1: function and mouse
@@ -77,7 +77,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
-                                 TRNS,TRNS,TRNS,
+                                 SPC, TRNS,TRNS,
         // right hand
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
              TRNS,Y,   U,   I,   O,   P,   TRNS,
@@ -86,7 +86,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
         TRNS,
-        TRNS,TRNS,TRNS
+        TRNS,TRNS,PENT
     ),
 
     KEYMAP(  // Layer3: keyboard functions
@@ -194,8 +194,8 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_LAYER_MOMENTARY(1),                      // FN3 - momentary Layer1, function keys
     ACTION_LAYER_SET(2, ON_BOTH),                   // FN4 - set Layer2, qwerty
     ACTION_LAYER_MOMENTARY(3),                      // FN5 - set Layer3, bootloader
-    ACTION_LAYER_MOMENTARY(4),                      // FN6 - set Layer4, to use with Numpad keys and mirrored left
-
+    ACTION_LAYER_TAP_TOGGLE(4),                     // FN6 - set Layer4, to use with Numpad keys and mirrored left
+    ACTION_LAYER_TAP_KEY(4, KC_SPC),                // FN7 - set Layer4 on press, SPACE on tap
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
